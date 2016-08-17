@@ -144,9 +144,9 @@ class CompanyListSpider(Spider):
                 attrs['pitch'] = company.xpath('.//div[@class="pitch"]/text()').extract()[0]
                 attrs['img'] = company.xpath('.//div[@class="photo"]//img/@src').extract()[0]
                 attrs['link'] = company.xpath('.//div[@class="name"]/a/@href').extract()[0]
-                attrs['market'] = company.xpath('.//div[@data-column="market"]//a/text()').extract()
+                attrs['market'] = company.xpath('.//div[@data-column="market"]//a/text()').extract()[0]
                 value_path = './/div[@data-column="{}"]/div[@class="value"]/text()'
-                attr_list = ['stage', 'raised', 'company_size', 'joined', 'market']
+                attr_list = ['stage', 'raised', 'company_size', 'joined']
                 for attr in attr_list:
                     attrs[attr] = company.xpath(value_path.format(attr)).extract()[0]
 
