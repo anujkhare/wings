@@ -1,0 +1,9 @@
+*.pyc
+*.swp
+user_agents.txt
+proxy.txt
+proxy_list.txt
+*.csv
+*.log
+.scrapy
+*.ipynb*
