@@ -69,8 +69,6 @@ PROXY_LIST = 'proxy.txt'
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
     # 'scrapy.downloadermiddlewares.retry.RetryMiddleware': 90,
-    # Fix path to this module
-    # 'randomproxy.RandomProxy': 95,
     'scrapy.downloadermiddlewares.httpcache.HttpCacheMiddleware': 1,
     'scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware': 100,
     'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,
