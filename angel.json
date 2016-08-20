@@ -1,0 +1,206 @@
+{
+    "entities": {
+        "college": {
+            "alumni": {
+                "reverse": "studied at",
+                "to": "person"
+            },
+            "name": {
+                "to": "string"
+            },
+            "type": {
+                "to": "string"
+            },
+            "uid": {
+                "to": "string"
+            },
+            "website": {
+                "to": "website"
+            }
+        },
+        "company": {
+            "advisors": {
+                "reverse": "are advisor at",
+                "to": "person"
+            },
+            "board members": {
+                "reverse": "board member of",
+                "to": "person"
+            },
+            "current employees": {
+                "reverse": "work at",
+                "to": "person"
+            },
+            "founders": {
+                "reverse": "found company",
+                "to": "person"
+            },
+            "funding rounds": {
+                "to": "funding-round"
+            },
+            "investors": {
+                "reverse": "invested in",
+                "to": "person"
+            },
+            "located in": {
+                "reverse": "based companies",
+                "to": "location"
+            },
+            "markets": {
+                "reverse": "companies",
+                "to": "market"
+            },
+            "name": {
+                "to": "string"
+            },
+            "past employees": {
+                "reverse": "worked at",
+                "to": "person"
+            },
+            "product": {
+                "to": "string"
+            },
+            "size": {
+                "to": "number"
+            },
+            "type": {
+                "to": "string"
+            },
+            "uid": {
+                "to": "string"
+            },
+            "website": {
+                "to": "website"
+            }
+        },
+        "funding-round": {
+            "name": {
+                "to": "string"
+            },
+            "type": {
+                "to": "string"
+            },
+            "uid": {
+                "to": "string"
+            },
+            "website": {
+                "to": "website"
+            }
+        },
+        "location": {
+            "based companies": {
+                "reverse": "located in",
+                "to": "company"
+            },
+            "based person": {
+                "reverse": "located in",
+                "to": "person"
+            },
+            "name": {
+                "to": "string"
+            },
+            "type": {
+                "to": "string"
+            },
+            "uid": {
+                "to": "string"
+            },
+            "website": {
+                "to": "website"
+            }
+        },
+        "market": {
+            "companies": {
+                "reverse": "markets",
+                "to": "company"
+            },
+            "name": {
+                "to": "string"
+            },
+            "type": {
+                "to": "string"
+            },
+            "uid": {
+                "to": "string"
+            },
+            "website": {
+                "to": "website"
+            }
+        },
+        "person": {
+            "are advisor at": {
+                "reverse": "advisors",
+                "to": "company"
+            },
+            "board member of": {
+                "reverse": "board members",
+                "to": "company"
+            },
+            "found company": {
+                "reverse": "founders",
+                "to": "company"
+            },
+            "invested in": {
+                "reverse": "investors",
+                "to": "company"
+            },
+            "located in": {
+                "reverse": "based person",
+                "to": "location"
+            },
+            "name": {
+                "to": "string"
+            },
+            "skills": {
+                "reverse": "skilled",
+                "to": "skill"
+            },
+            "studied at": {
+                "reverse": "alumni",
+                "to": "college"
+            },
+            "type": {
+                "to": "string"
+            },
+            "uid": {
+                "to": "string"
+            },
+            "website": {
+                "to": "website"
+            },
+            "work at": {
+                "reverse": "current employees",
+                "to": "company"
+            },
+            "worked at": {
+                "reverse": "past employees",
+                "to": "company"
+            }
+        },
+        "skill": {
+            "name": {
+                "to": "string"
+            },
+            "skilled": {
+                "reverse": "skills",
+                "to": "person"
+            },
+            "type": {
+                "to": "string"
+            },
+            "uid": {
+                "to": "string"
+            },
+            "website": {
+                "to": "website"
+            }
+        }
+    },
+    "literals": [
+        "date",
+        "website",
+        "number",
+        "string"
+    ],
+    "schema-name": "angel-co"
+}
