@@ -83,11 +83,10 @@ class AngelSpider(CrawlSpider):
                 amt = sel_amt.xpath('./a/text()').extract()[0].strip('\n')
             else:
                 amt = sel_amt.xpath('./text()').extract()[0].strip('\n')
-            print(stage, amt)
             company['funding'].add((stage, amt))
 
         # PORTFOLIO! (companies invest as well)
-        print(company)
+        print("\n", company)
         yield company
 
     def get_investor_dtype(self, sel):
@@ -181,10 +180,10 @@ class AngelSpider(CrawlSpider):
             yield item
 
         # Get colleges from 'education' section
-        person['college'] = set()
         path_ed = '//div[contains(@class,"profile_college_tagger")]/@data-taggings'
         college_data = sel.xpath(path_ed)
         if len(college_data) > 0:
+            person['college'] = set()
             colleges = json.loads(college_data.extract()[0])
             for college in colleges:
                 name = college['name']
@@ -210,7 +209,7 @@ class AngelSpider(CrawlSpider):
             name, url, uid = get_name_url_uid(location_tag)
             person['location'] = set([uid])
             if uid not in self.uid_seen:
-                yield BasicItem(entity_type='city', name=name,
+                yield BasicItem(entity_type='location', name=name,
                                 website=url, uid=uid)
 
         # print(person)
