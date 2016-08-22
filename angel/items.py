@@ -1,10 +1,4 @@
-# -*- coding: utf-8 -*-
-
-# Define here the models for your scraped items
-#
-# See documentation in:
-# http://doc.scrapy.org/en/latest/topics/items.html
-
+# TODO: Have a metaclass generate such classes based on the schema. DRY!
 import scrapy
 
 
